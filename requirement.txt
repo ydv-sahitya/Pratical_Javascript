@@ -1,0 +1,7 @@
+version _ 1 
+
+[] It should have a place to store todos.
+[] It should have a place to show to todos.
+[] It should have a place to add todos.
+[] It should have a place to edit todo. 
+[] It should have a way to remove a todos.
