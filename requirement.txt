@@ -1,7 +1,15 @@
+Version 2
+
+[*] It should hvae a function to add a todo
+[*] It should have a function to edit a todo
+[*] It should have a function to remove  a todo
+
+
+
 version _ 1 
 
-[] It should have a place to store todos.
-[] It should have a place to show to todos.
-[] It should have a place to add todos.
-[] It should have a place to edit todo. 
-[] It should have a way to remove a todos.
+[*] It should have a place to store todos.
+[*] It should have a place to show to todos.
+[*] It should have a place to add todos.
+[*] It should have a place to edit todo. 
+[*] It should have a way to remove a todos.
