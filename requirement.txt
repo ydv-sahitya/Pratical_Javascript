@@ -1,9 +1,16 @@
+
+version - 4
+
+[ ] It should have a function to toggle a todo.
+
+
+
+
 version 3
 
-[ ] We should initalize the todos variable with object.
-[ ] The add function should add object.
-[ ] The edit function should edit objects.
-[ ] It should have a function to toggle a todo.
+[*] We should initalize the todos variable with object.
+[* ] The add function should add object.
+[ *] The edit function should edit objects.
 
 
 Version 2
