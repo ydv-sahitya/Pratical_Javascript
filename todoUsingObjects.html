@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<h1>here we are using objects.</h1>
+
+<script>
+
+  var todos = [
+    {todotext: 'Item 1', completed: false},
+    {todotext: 'Item 2', completed: false},
+    {todotext: 'Item 3', completed: false}
+  ];
+
+  // console.log(todos);
+
+
+ function edit(position,newTodoText) {
+   todos[position].todotext = newTodoText;
+   console.log(todos);
+ }
+
+
+
+
+  // Rewrite so that argument passed in is saved
+  // to a property on an object.
+
+  function add(initialTodoText) {
+    todos.push({todotext:initialTodoText, completed: false});
+
+  }
+  add('do laundry');
+
+
+
+
+</script>
+
+
+</body>
+</html>
