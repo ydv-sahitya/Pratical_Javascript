@@ -34,14 +34,10 @@
      displayTodos();
   }
 
-
-
   function remove(position) {
     todos.splice(position, 1);
      displayTodos();
   }
-
-
 
     // if todo at position has .completed equal to false
       // Make . completed true.
@@ -55,9 +51,9 @@
     } else {
       todos[position].completed = false;
     }
-   
+      displayTodos();
     }
-       displayTodos();
+       
 
     function displayTodos() {
       for (var i = 0; i<todos.length; i++){
@@ -66,6 +62,38 @@
       } 
     }
 
+
+
+    function toggleALl() {
+      //we'll go with this approach it reads a little better
+
+      // find out if everything is true.
+      // How many tools are there in total? ==> tods.length
+      // How todos are completed? ==> completedTodos
+
+      var completedTodos = 0;
+
+      for (var i = 0; i < todos.length; i++) {
+        if (todos[i].completed === true) {
+          completedTodos++;
+        }
+      }
+
+      if (completedTodos === todos.length) {
+        for (var i = 0; i < todos.length; i++) {
+          todos[i].completed = false;
+        }
+      } else {
+        for (var i = 0; i < todos.length; i++) {
+          todos[i].completed = true;
+        }
+      }
+        
+
+      displayTodos();
+    }
+
+    
 
 </script>
 

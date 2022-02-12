@@ -1,3 +1,11 @@
+
+Version 6 (pratice is again. earlier version too.)
+[*] It should have a function for toggling all todos.
+[*] If everything is false ==> change everything to true.
+[*] If everything is true ==> change everything to false.
+[*] If mixed ==> change to every to true. 
+
+
 Version 5
 [*] It should have a function for displaying todos.
 [*] displayTodos should show the todoText property and show the completed property.
