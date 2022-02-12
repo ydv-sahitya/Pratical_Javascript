@@ -18,11 +18,11 @@
     {todotext: 'Item 3', completed: false}
   ];
 
-  // console.log(todos);
+    displayTodos();
 
    function edit(position,newTodoText) {
    todos[position].todotext = newTodoText;
-   console.log(todos);
+    displayTodos();
  }
 
  
@@ -31,14 +31,14 @@
 
   function add(initialTodoText) {
     todos.push({todotext:initialTodoText, completed: false});
-    console.log(todos);
+     displayTodos();
   }
-  add('do laundry');
 
-  
+
+
   function remove(position) {
     todos.splice(position, 1);
-    console.log(todos);
+     displayTodos();
   }
 
 
@@ -57,7 +57,14 @@
     }
    
     }
-      console.log(todos);
+       displayTodos();
+
+    function displayTodos() {
+      for (var i = 0; i<todos.length; i++){
+          // console.log(todos[i].todotext);
+          console.log(todos[i]);
+      } 
+    }
 
 
 </script>
