@@ -20,25 +20,44 @@
 
   // console.log(todos);
 
-
- function edit(position,newTodoText) {
+   function edit(position,newTodoText) {
    todos[position].todotext = newTodoText;
    console.log(todos);
  }
 
-
-
-
+ 
   // Rewrite so that argument passed in is saved
   // to a property on an object.
 
   function add(initialTodoText) {
     todos.push({todotext:initialTodoText, completed: false});
-
+    console.log(todos);
   }
   add('do laundry');
 
+  
+  function remove(position) {
+    todos.splice(position, 1);
+    console.log(todos);
+  }
 
+
+
+    // if todo at position has .completed equal to false
+      // Make . completed true.
+    // If todo at position has .completed equal to true
+      // Make .completed false.
+    // Display the todos to the console.
+
+    function toggle(position) {
+       if (todos[position].completed === false) {
+      todos[position].completed = true;
+    } else {
+      todos[position].completed = false;
+    }
+   
+    }
+      console.log(todos);
 
 
 </script>

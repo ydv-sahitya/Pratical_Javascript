@@ -1,9 +1,7 @@
 
 version - 4
 
-[ ] It should have a function to toggle a todo.
-
-
+[*] It should have a function to toggle a todo.
 
 
 version 3
