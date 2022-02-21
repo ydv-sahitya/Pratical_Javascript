@@ -10,6 +10,9 @@
   
 <h1>here we are using objects.</h1>
 
+<button id="display-todos-button">Display todos  </button>
+<button id="display-toggleAll"> Toggle all</button>
+
 <script>
 
   var todos = [
@@ -93,6 +96,12 @@
       displayTodos();
     }
 
+
+    var displayTodosButton = document.getElementById('display-todos-button');
+    displayTodosButton.addEventListener('click', displayTodos);
+
+    var toggleAllButton = document.getElementById('display-toggleAll');
+    toggleAllButton.addEventListener('click',toggleALl);
     
 
 </script>

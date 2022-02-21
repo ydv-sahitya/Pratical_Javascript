@@ -1,3 +1,10 @@
+version 7
+[*] It should have displayTodos button.
+[*] The displayTodos button should run the displayTodos Function.
+[*] It should have a toggleAll button.
+[*] The toggle button should run the toggleAll function.
+
+
 
 Version 6 (pratice is again. earlier version too.) {finished}
 [*] It should have a function for toggling all todos.
@@ -5,13 +12,6 @@ Version 6 (pratice is again. earlier version too.) {finished}
 [*] If everything is true ==> change everything to false.
 [*] If mixed ==> change to every to true. 
 
-
-
-Version 6 (pratice is again. earlier version too.) {finished}
-[*] It should have a function for toggling all todos.
-[*] If everything is false ==> change everything to true.
-[*] If everything is true ==> change everything to false.
-[*] If mixed ==> change to every to true. 
 
 
 
