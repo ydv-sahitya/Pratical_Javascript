@@ -56,7 +56,7 @@
     }
       displayTodos();
     }
-       
+      
 
     function displayTodos() {
       for (var i = 0; i<todos.length; i++){
@@ -99,9 +99,16 @@
 
     var displayTodosButton = document.getElementById('display-todos-button');
     displayTodosButton.addEventListener('click', displayTodos);
+    // displayTodosButton.addEventListener('click', displayTodos);   // test this later too
+
+
 
     var toggleAllButton = document.getElementById('display-toggleAll');
     toggleAllButton.addEventListener('click',toggleALl);
+    // toggleAllButton.addEventListener('click',toggleALl());  // test this later
+    
+
+
     
 
 </script>

@@ -56,6 +56,8 @@ myHouse2.color = 'red';
 **myhouse2.color?**
 
 
+
+
 ### another question
 
 ```js
@@ -68,3 +70,117 @@ myhouse2.color = 'red';
 **myHouse2.color**
 
 
+
+## Interlude - Experimenting with function
+
+
+*2and example*
+
+
+```js
+funtion demoFunction() {}
+
+var experiment1 = demoFunction;  // ? guess the output
+var experiment2 = demoFunction();   // ?
+
+// experiment1 
+// experiment1 = demoFunction
+```
+
+```js
+
+function demoFunctionThatReturnsAString() {
+  return 'a string';
+}
+
+var experiment3 = demoFunctionThatReturnsAString;
+var experiment4 = demoFunctionThatReturnsAString();
+
+// lets do experiment
+// experiment3   
+// if I want to prove again.
+// experiment3 === demoFunctionThatsReturnString
+
+
+// Pause the video and write down (actually do this, in your own words)
+// one sentence that explain why experiment4 is eual to 'a string'.
+
+// `return` inserts a value (in this case, 'a string') where the function 
+// (demoFunctionThatRetursAString) was called.
+
+// so var experiment4 = 'a string';
+
+```
+
+
+**3rd example**
+
+```js
+
+function dempFunctionThatReturnsUndefined() {
+  return undefined;
+}
+
+var experiment5 = demoFunctionThatReturnsUndefined;
+var experiment6 = demoFunctionTHatReturnsUndefined();
+
+// tell me the output of demoFuntionThatReturnsUndefined;
+
+// user debugger if I want it debugg something on console.
+
+debugger;
+function demoFuntion() {
+
+}
+
+demoFunction();
+function demoFunctionThatReutrnsAString() {
+  return 'a string';
+
+}
+
+demoFunctionThatReturnsAString();
+
+
+```
+
+**4th example experiment with function **
+
+```js
+
+function demoFunctionThatReturnAString() {
+  return 'a string';
+}
+
+function logThis(thing) {
+  console.log(thing);
+}
+
+debugger;   // use this to show in chrome devtool.
+
+logThis(demoFunctionThatReturnsAString);  // example 7
+logThis(demoFunctionTHatReturnsAString()); // example 8
+
+
+// what would be the output ? 
+
+```
+
+
+
+### Quiz: Another experiment
+
+```js
+
+function function1(inputFunction, inputString) {  
+  return inputFunction(inputString);
+}
+
+function function2(thing) {
+  return thing;
+}
+
+var experiment = function1(function2, 'yolo');
+
+
+```
