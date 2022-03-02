@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./base.css">
 </head>
+
 <body>
-  
-<h1>here we are using objects.</h1>
 
-<button id="display-todos-button">Display todos  </button>
-<button id="display-toggleAll"> Toggle all</button>
+  <h1>here we are using objects.</h1>
 
-<script>
+  <button id="display-todos-button">Display todos </button>
+  <button id="display-toggleAll"> Toggle all</button>
+  <button id="add-button">Add</button>
+  <input id="add-input">
+  <button id="edit-button">Edit</button>
+  <input id="edit-postion-input">
+  <input id="edit-text-input"> <br>
+  <button id="remove-button">Remove</button>
+  <input id="remove-input">
+  <button id="toggle-button">toggle</button>
+  <input id="toggle-input">
 
-  var todos = [
-    {todotext: 'Item 1', completed: false},
-    {todotext: 'Item 2', completed: false},
-    {todotext: 'Item 3', completed: false}
-  ];
+  <script>
+
+    var todos = [
+      { todotext: 'Item 1', completed: false },
+      { todotext: 'Item 2', completed: false },
+      { todotext: 'Item 3', completed: false }
+    ];
 
     displayTodos();
 
-   function edit(position,newTodoText) {
-   todos[position].todotext = newTodoText;
-    displayTodos();
- }
+    function edit() {
+      var position = editPositionInput.value;
+      var newTodoText = editTextInput.value;
+      todos[position].todotext = newTodoText;
+      editPositionInput.value = '';
+      editTextInput.value = '';     // for empty value. 
+      displayTodos();
+    }
 
- 
-  // Rewrite so that argument passed in is saved
-  // to a property on an object.
 
-  function add(initialTodoText) {
-    todos.push({todotext:initialTodoText, completed: false});
-     displayTodos();
-  }
+    // Rewrite so that argument passed in is saved
+    // to a property on an object.
 
-  function remove(position) {
-    todos.splice(position, 1);
-     displayTodos();
-  }
+    // function add(initialTodoText) {
+    //   todos.push({ todotext: initialTodoText, completed: false });
+    //   displayTodos();
+    // }
+
+    function add() {
+      var initialTodoText = addInput.value;
+      todos.push({ todotext: initialTodoText, completed: false });
+      addInput.value = '';
+      displayTodos();
+    }
+
+
+
+    function remove() {
+      var position = removePositionInput.value;
+      todos.splice(position, 1);
+      removePositionInput.value = '';
+      displayTodos();
+    }
 
     // if todo at position has .completed equal to false
-      // Make . completed true.
+    // Make . completed true.
     // If todo at position has .completed equal to true
-      // Make .completed false.
+    // Make .completed false.
     // Display the todos to the console.
 
     function toggle(position) {
-       if (todos[position].completed === false) {
-      todos[position].completed = true;
-    } else {
-      todos[position].completed = false;
-    }
+      var position = toggleInput.value;
+      if (todos[position].completed === false) {
+        todos[position].completed = true;
+      } else {
+        todos[position].completed = false;
+      }
+
+      toggleInput.value = '';
       displayTodos();
     }
-      
+
 
     function displayTodos() {
-      for (var i = 0; i<todos.length; i++){
-          // console.log(todos[i].todotext);
-          console.log(todos[i]);
-      } 
+      for (var i = 0; i < todos.length; i++) {
+        // console.log(todos[i].todotext);
+        console.log(todos[i]);
+      }
     }
 
 
@@ -91,7 +121,7 @@
           todos[i].completed = true;
         }
       }
-        
+
 
       displayTodos();
     }
@@ -104,15 +134,32 @@
 
 
     var toggleAllButton = document.getElementById('display-toggleAll');
-    toggleAllButton.addEventListener('click',toggleALl);
+    toggleAllButton.addEventListener('click', toggleALl);
     // toggleAllButton.addEventListener('click',toggleALl());  // test this later
-    
+
+    var addButton = document.getElementById('add-button');
+    var addInput = document.getElementById('add-input');
+    addButton.addEventListener('click', add);
+
+    var editButton = document.getElementById('edit-button');
+    var editPositionInput = document.getElementById('edit-postion-input');
+    var editTextInput = document.getElementById('edit-text-input');
+    editButton.addEventListener('click', edit);
+
+    var removeButton = document.getElementById('remove-button');
+    var removePositionInput = document.getElementById('remove-input');
+    removeButton.addEventListener('click', remove);
+
+    var toggleButton = document.getElementById('toggle-button');
+    var toggleInput = document.getElementById('toggle-input');
+    toggleButton.addEventListener('click', toggle);
 
 
-    
 
-</script>
+
+  </script>
 
 
 </body>
+
 </html>
