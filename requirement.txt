@@ -1,4 +1,6 @@
-
+Version 11
+[*] Each todo should have its own toggle button.
+[*] The toggle buttons should actually work.
 
 
 Version 10

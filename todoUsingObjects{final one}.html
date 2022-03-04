@@ -22,8 +22,8 @@
   <input id="edit-text-input"> <br>
   <!-- <button id="remove-button">Remove</button>
   <input id="remove-input"> -->
-  <button id="toggle-button">toggle</button>
-  <input id="toggle-input">
+  <!-- <button id="toggle-button">toggle</button>
+  <input id="toggle-input"> -->
 
 
   <ul id="todos-Ul">
@@ -90,15 +90,17 @@
     // Make .completed false.
     // Display the todos to the console.
 
-    function toggle(position) {
-      var position = toggleInput.value;
+    function toggle(event) {
+      // var position = toggleInput.value; // when we were using input.
+      var position = event.currentTarget.id;
+
       if (todos[position].completed === false) {
         todos[position].completed = true;
       } else {
         todos[position].completed = false;
       }
 
-      toggleInput.value = '';
+      // toggleInput.value = '';
       displayTodos();
     }
 
@@ -127,6 +129,12 @@
         removeButton.id = i;
 
 
+        var toggleButton = document.createElement('button');
+        toggleButton.innerText = 'Toggle';
+        toggleButton.addEventListener('click', toggle);
+        toggleButton.id = i;
+
+        todoLi.appendChild(toggleButton);
         todoLi.appendChild(removeButton);
 
 
@@ -191,9 +199,11 @@
     // var removePositionInput = document.getElementById('remove-input');
     // removeButton.addEventListener('click', remove);
 
-    var toggleButton = document.getElementById('toggle-button');
-    var toggleInput = document.getElementById('toggle-input');
-    toggleButton.addEventListener('click', toggle);
+
+    // this code from old todo
+    // var toggleButton = document.getElementById('toggle-button');
+    // var toggleInput = document.getElementById('toggle-input');
+    // toggleButton.addEventListener('click', toggle);
 
 
 
