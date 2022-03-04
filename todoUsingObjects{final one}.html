@@ -25,6 +25,12 @@
   <button id="toggle-button">toggle</button>
   <input id="toggle-input">
 
+
+  <ul id="todos-Ul">
+  </ul>
+
+
+
   <script>
 
     var todos = [
@@ -89,9 +95,26 @@
 
 
     function displayTodos() {
+
+      var todosUl = document.getElementById('todos-Ul');
+
+      // we want to clear out any existing lis inside of todoUL.
+      todosUl.innerHTML = '';
+
       for (var i = 0; i < todos.length; i++) {
-        // console.log(todos[i].todotext);
-        console.log(todos[i]);
+
+        var todoLi = document.createElement('li');
+
+        if (todos[i].completed === true) {
+          todoLi.innerText = '[X] ' + todos[i].todotext;
+        } else {
+          todoLi.innerHTML = '[ ] ' + todos[i].todotext;
+        }
+
+
+        // todoLi.innerText = todos[i].todoText;
+        todosUl.appendChild(todoLi);
+
       }
     }
 
